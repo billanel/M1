@@ -1,0 +1,27 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "CodeGrpcGenere";
+
+service OD1I {
+    rpc A(MessageVide) returns (MessageVide);
+    rpc B(MessageVide) returns (MessageVide);
+    rpc C(MessageVide) returns (MessageVide);
+    rpc waitA(MessageVide) returns (MessageVide);
+    rpc waitB(MessageVide) returns (MessageVide);
+    rpc waitC(MessageVide) returns (MessageVide);
+}
+
+service OD2I {
+    rpc G(MessageVide) returns (MessageVide);
+    rpc waitG(MessageVide) returns (MessageVide);
+}
+
+service OD3I {
+    rpc E(MessageVide) returns (MessageVide);
+    rpc waitE(MessageVide) returns (MessageVide);
+    rpc F(MessageVide) returns (MessageVide);
+    rpc waitF(MessageVide) returns (MessageVide);
+}
+
+message MessageVide{}
